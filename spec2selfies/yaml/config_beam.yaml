@@ -1,0 +1,33 @@
+batch_size: 32
+wandb_project: "test_sweep"
+
+bayes_config:
+  n_calls: 5
+  n_initial_points: 5
+
+space_search:
+  num_beams:
+    type: "categorical"
+    values: [1, 5, 10, 15, 20]
+  seq_beam_width:
+    type: "categorical"
+    values: [1, 5, 10, 15, 20]
+  task:
+    type: "categorical"
+    values : ['beam']
+
+logger_config:
+  size_buffer: 5000
+  buffers:
+    ids:
+      signal: 128
+      dtype: "uint8"
+    embeddings:
+      signal: 573
+      dtype: "float16"
+    spectras:
+      signal: 1801
+      dtype: "float16"
+    scores:
+      signal: 1
+      dtype: "float16"

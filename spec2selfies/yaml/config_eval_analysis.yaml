@@ -1,0 +1,23 @@
+fingerprints:
+  morgan:
+    group: 0
+      
+  rdkit:
+    group: 0
+      
+  atom_pair:
+    group: 0
+      
+  topological_torsion:
+    group: 0
+
+sim_functions:
+  tan:
+    group: 0
+  dice:
+    group: 0
+  cosine:
+    group: 0
+  
+use_tqdm: True
+eval_items: 'scores'

@@ -1,0 +1,44 @@
+batch_size: 2
+
+log_period: 10 # in batch
+
+gen_kwargs:
+  num_beams: 15
+  seq_beam_width: 15
+  task: "beam"
+
+corrector: 'SELFormer_PerfectModel'
+dataset: "./data/scaffold_split_merged_spectra/arrow/tokenized_datasets/with_formula/perfect_model/test"
+use_perfect_model: True
+# Logger config
+size_buffer: 10
+steps: 3
+buffers:
+  text_ids:
+    signal: 200
+    shape_mask: [1, 1, 1, 1]
+    dtype: "uint8"
+  embeddings:
+    signal: 768
+    shape_mask: [1, 1, 1, 1]
+    dtype: "float16"
+  spectras:
+    signal: 1801
+    shape_mask: [1, 1, 1, 1]
+    dtype: "float16"
+  scores:
+    signal: 0
+    shape_mask: [1, 1, 1, 0]
+    dtype: "float16"
+  bm_text_ids:
+    signal: 514
+    shape_mask: [1, 0, 0, 1]
+    dtype: "float16"
+  bm_spectra:
+    signal: 1801
+    shape_mask: [1, 0, 0, 1]
+    dtype: "float16"
+  initial_score:
+    signal: 0
+    shape_mask: [1, 0, 0, 0]
+    dtype: "float16"
