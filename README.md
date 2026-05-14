@@ -1,9 +1,9 @@
 # Spectroscopy-Informed Inverse Molecular Design via Invertible LLMs
 
-This repository contains the code for our paper:
+This repository contains the code for our working paper:
 
 > **Spectroscopy-Informed Inverse Molecular Design via Invertible Large Language Models**  
-> Lazare Ricour-Dumas et al. — submitted to IEEE WCCI 2026
+> Lazare Ricour-Dumas et al.
 
 ## Overview
 
@@ -47,15 +47,4 @@ python train_inv.py --config configs/inv.yaml
 
 # Run inference
 python predict.py --spectrum data/example_spectrum.npy --steps 3
-```
-
-## Citation
-
-```bibtex
-@article{ricour2026spectro,
-  title={Spectroscopy-Informed Inverse Molecular Design via Invertible Large Language Models},
-  author={Ricour-Dumas, Lazare and others},
-  journal={IEEE WCCI 2026},
-  year={2026}
-}
 ```
