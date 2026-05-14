@@ -7,7 +7,7 @@ This repository contains the code for our working paper:
 
 ## Overview
 
-We propose a novel approach to inverse molecular design: given an IR spectrum, generate a chemically valid molecular structure whose vibrational signature is consistent with the input. Rather than training an end-to-end spectrum-to-structure model, we frame the problem as **embedding inversion** using the Vec2Text framework.
+We propose a novel approach to inverse molecular design: given an IR spectrum, generate a chemically valid molecular structure whose vibrational signature is consistent with the input. Rather than training an end-to-end spectrum-to-structure model, we frame the problem as **embedding inversion** using the [Vec2Text](https://github.com/vec2text/vec2text) framework.
 
 The pipeline has two stages:
 1. Fine-tune a chemistry-aware LLM ([SELFormer](https://github.com/HUBioDataLab/SELFormer)) on the forward structure-to-spectrum task (SELFIES → IR spectrum)
